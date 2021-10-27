@@ -13,5 +13,6 @@
     <import resource="classpath:../web/META-INF/cxf/cxf-servlet.xml" />
     <!-- implementor参数：指明具体的实现类；address参数：指明这个webservice的相对地址 -->
     <jaxws:endpoint id="PythonService" implementor="main.PythonService.PTServicePort" address="/PTService" />
+    <jaxws:endpoint id="DataService" implementor="main.DataService.DataServicePort" address="/DataService" />
 
 </beans>

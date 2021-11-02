@@ -20,6 +20,8 @@ public class DataService implements DataServicePort {
     private String accessKeyId = "LTAI5tNVfKmpK9XDyvcyWX6f";
     private String accessKeySecret = "730eX85eAqYEKPBzLTWE5EK2CosA0q";
     private String bucketName = "internet-practice";
+    private String appendixEnd = "http://oss-cn-hangzhou.aliyuncs.com";
+    private String appendixBucket = "appendixlist";
     @Override
     public String getAllData() {
         OSS ossClient = new OSSClientBuilder().build(endpoint, accessKeyId, accessKeySecret);
@@ -29,6 +31,17 @@ public class DataService implements DataServicePort {
         for (OSSObjectSummary s : sums) {
             try{
                 stringBuilder.append("https://internet-practice.oss-cn-beijing.aliyuncs.com/").append(URLEncoder.encode(s.getKey(), "UTF-8")).append("\n");
+            } catch (UnsupportedEncodingException e){
+                e.printStackTrace();
+                return "Encoding Error";
+            }
+        }
+        ossClient = new OSSClientBuilder().build(appendixEnd, accessKeyId, accessKeySecret);
+        objectListing = ossClient.listObjects(appendixBucket);
+        sums = objectListing.getObjectSummaries();
+        for (OSSObjectSummary s : sums) {
+            try{
+                stringBuilder.append("https://appendixlist.oss-cn-hangzhou.aliyuncs.com/").append(URLEncoder.encode(s.getKey(), "UTF-8")).append("\n");
             } catch (UnsupportedEncodingException e){
                 e.printStackTrace();
                 return "Encoding Error";

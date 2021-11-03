@@ -49,12 +49,11 @@ public class DataService implements DataServicePort {
                 line.put("interpret", rs.getString("interpret"));
                 line.put("user_id", rs.getInt("user_id"));
                 line.put("input_time", rs.getDate("input_time"));
-                line.put("content", rs.getString("text"));
+                line.put("content", rs.getString("content"));
                 line.put("status", rs.getInt("status"));
                 line.put("analyse_id", rs.getInt("analyse_id"));
                 result.add(line);
             }
-            System.out.println(JSONObject.toJSONString(result));
             rs.close();
             stmt.close();
             conn.close();
@@ -77,7 +76,6 @@ public class DataService implements DataServicePort {
                 se.printStackTrace();
             }
         }
-        System.out.println("Goodbye!");
         return JSONObject.toJSONString(result);
     }
 }

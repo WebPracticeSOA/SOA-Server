@@ -226,7 +226,7 @@ def getClaimDate(content):
 def writeCsv(filePath,rows):
     f = open(filePath, 'w',newline='')
     csv_writer = csv.writer(f)
-    csv_writer.writerow(["字段名称", "字段描述", "录入形式","数据类型","必输项","备注"])
+    csv_writer.writerow(["字段名称", "字段描述", "录入形式","数据类型","必输项","备注","内化状态"])
     for row in rows:
         csv_writer.writerow(row)
     f.close()
@@ -296,10 +296,10 @@ def createCsv(filePath,pathtype):
 
     temp=[]
     temp.append("外规类别")
-    temp.append(None)
-    temp.append(None)
-    temp.append(None)
-    temp.append(None)
+    temp.append(pathtype)
+    temp.append("手工选择")
+    temp.append("字符串型")
+    temp.append("是")
     temp.append(None)
     rows.append(temp)
 
@@ -393,6 +393,12 @@ def createCsv(filePath,pathtype):
     temp.append("字符串型")
     temp.append("是")
     temp.append("0 未发布"+"\n"+"1 已发布")
+    rows.append(temp)
+
+    temp=[]
+    temp.append("内化状态")
+    for i in range(0,5):
+        temp.append(0)
     rows.append(temp)
 
     writeCsv(resPath +pathtype+"\\"+fileName + ".csv", rows)

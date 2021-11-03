@@ -9,13 +9,13 @@ urlStatitory="http://www.pbc.gov.cn/tiaofasi/144941/144953/index.html"
 urlRegulation="http://www.pbc.gov.cn/tiaofasi/144941/144957/index.html"
 urlNormative="http://www.pbc.gov.cn/tiaofasi/144941/3581332/index.html"
 urlOthers="http://www.pbc.gov.cn/tiaofasi/144941/144959/index.html"
-path="C:\\Users\\Administrator.DESKTOP-CGIO78B\\Downloads"
+path="C:\\Users\\hu\\Downloads"
 
 typeStatitory="行政法规"
 typeRegulation="部门规章"
 typeNormative="规范性文件"
 typeOthers="其他文件"
-DownloadedPath='C:\\Users\\Administrator.DESKTOP-CGIO78B\\Downloads\\'
+DownloadedPath='C:\\Users\\hu\\Downloads\\'
 link1='http://www.pbc.gov.cn/tiaofasi/resource/cms/2021/06/%E4%B8%AD%E5%8D%8E%E4%BA%BA%E6%B0%91%E5%85%B1%E5%92%8C%E5%9B%BD%E4%BA%BA%E6%B0%91%E5%B8%81%E7%AE%A1%E7%90%86%E6%9D%A1%E4%BE%8B.docx'
 xpathOfdateFHalf="/html/body/div[4]/table[2]/tbody/tr/td[3]/table/tbody/tr/td/div/div/div[2]/div[1]/table/tbody/tr[2]/td/table["
 xpathOfdateSHalf="]/tbody/tr/td[2]/span"

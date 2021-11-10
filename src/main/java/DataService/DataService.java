@@ -1,14 +1,6 @@
 package DataService;
 
 import com.alibaba.fastjson.JSONObject;
-import com.aliyun.oss.OSS;
-import com.aliyun.oss.OSSClientBuilder;
-import com.aliyun.oss.internal.OSSHeaders;
-import com.aliyun.oss.model.*;
-
-import java.io.IOException;
-import java.io.UnsupportedEncodingException;
-import java.net.URLEncoder;
 import java.sql.*;
 
 import javax.jws.WebService;

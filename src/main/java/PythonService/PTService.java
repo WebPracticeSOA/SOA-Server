@@ -17,7 +17,7 @@ public class PTService implements PTServicePort {
         Process proc;
         try {
 //            String[] cmd = {"cmd","/C","python D:\\Web-final\\SOA-Part\\src\\Spider\\Spider.py"};
-            proc = Runtime.getRuntime().exec("python /usr/local/tomcat/apache-tomcat-7.0.108/webapps/SOA-Part/WEB-INF/classes/Spider/Spider.py");// 执行py文件
+            proc = Runtime.getRuntime().exec("python3 /usr/local/tomcat/apache-tomcat-7.0.108/webapps/SOA-Part/WEB-INF/classes/Spider/Spider.py");// 执行py文件
             //用输入输出流来截取结果
             printMessage(proc.getInputStream());
             printMessage(proc.getErrorStream());
